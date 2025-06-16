@@ -1,4 +1,4 @@
-package com.example.FIS_EmployeeService;
+package com.fisemployeeservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
