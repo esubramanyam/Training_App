@@ -2,11 +2,9 @@ package com.example.FIS_EmployerService.Controller;
 
 import com.example.FIS_EmployerService.Service.EmployerInfoService;
 import com.example.FIS_EmployerService.model.EmployerInfo;
-import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
-import org.springframework.http.HttpRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
