@@ -53,6 +53,16 @@ public class EmployerInfo {
     @Size(max=9, message="Zip Code should not be greater than 9 character")
     private String zip_code;
 
+    private String PerformedBy;
+
+    public String getPerformedBy() {
+        return PerformedBy;
+    }
+
+    public void setPerformedBy(String performedBy) {
+        PerformedBy = performedBy;
+    }
+
     public int getEmployee_identification_number() {
         return employee_identification_number;
     }
@@ -136,7 +146,7 @@ public class EmployerInfo {
     @Override
     public String toString() {
         return "EmployerInfo{" +
-                "employee_identification_number='" + employee_identification_number + '\'' +
+                "employee_identification_number=" + employee_identification_number +
                 ", employee_company_name='" + employee_company_name + '\'' +
                 ", SIC='" + SIC + '\'' +
                 ", employee_addr_line_1='" + employee_addr_line_1 + '\'' +
@@ -146,6 +156,7 @@ public class EmployerInfo {
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zip_code='" + zip_code + '\'' +
+                ", PerformedBy='" + PerformedBy + '\'' +
                 '}';
     }
 }

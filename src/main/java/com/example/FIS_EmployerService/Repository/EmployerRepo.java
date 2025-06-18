@@ -10,5 +10,5 @@ import java.util.List;
 public interface EmployerRepo extends JpaRepository<EmployerInfo , Integer> {
     EmployerInfo save(EmployerInfo empInfo);
 
-    List<EmployerInfo> findById(int employeeId);
+    EmployerInfo findById(int employeeId);
 }

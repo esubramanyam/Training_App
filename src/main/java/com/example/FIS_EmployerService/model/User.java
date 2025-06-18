@@ -1,14 +1,13 @@
 package com.example.FIS_EmployerService.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "USER")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String userName;
     private String userPassword;
