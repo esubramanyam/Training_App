@@ -4,6 +4,7 @@ import com.example.FIS_EmployerService.Service.MyUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
@@ -28,8 +29,10 @@ public class SecurityConfig {
         return http
                 .csrf(Customizer->Customizer.disable())
                 .authorizeHttpRequests(request->request
-                        .requestMatchers("register")
+                        .requestMatchers("register","/swagger.html","/swagger-ui/**", "/swagger-ui.html", "/docs/**","/v3/api-docs/**")
                         .permitAll()
+                        .requestMatchers(HttpMethod.POST ,"/employer/saveEmployerInfo").hasAuthority("ADMIN")
+                        .requestMatchers(HttpMethod.GET ,"/employer/getEmployerInfo/{employee_identification_number}").hasAuthority("ADMIN")
                         .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

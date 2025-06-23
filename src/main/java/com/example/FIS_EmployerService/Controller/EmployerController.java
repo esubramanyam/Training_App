@@ -39,8 +39,9 @@ private EmployerInfoService employerService;
     }
     else {
         employerInfo.setPerformedBy(principal.getName());
-        employerService.saveEmployerInfo(employerInfo);
+        employerInfo= employerService.saveEmployerInfo(employerInfo);
         return ResponseEntity.ok("Employer Information Saved Successfully");
+
     }
 
 }

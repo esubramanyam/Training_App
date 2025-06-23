@@ -14,9 +14,10 @@ public class EmployerInfoService {
 @Autowired
 private EmployerRepo employerRepo;
 
-    public void saveEmployerInfo(EmployerInfo employerInfo) {
+    public EmployerInfo saveEmployerInfo(EmployerInfo employerInfo) {
 
         employerRepo.save(employerInfo);
+        return employerInfo;
 
     }
 
