@@ -34,4 +34,14 @@ public class ResponseHandler {
 		map.put("Error Message", description);
 		return new  ResponseEntity<>(map, status);
 	}
+	
+	public static ResponseEntity<Map<String, Object>> responseBuilder(HttpStatus status, 
+			List<PlanInfoModel> response, String errorCode, String description) {
+		Map<String, Object> map = new LinkedHashMap<>();
+		map.put("Error Code", errorCode);
+		map.put("Refered Column", description);
+		map.put("Response",response);
+		return new  ResponseEntity<>(map, status);
+	}
+	
 }

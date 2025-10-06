@@ -2,7 +2,6 @@ package com.fisemployeeservice.dto;
 
 public class PlanInfoDto {
 	
-    private int planId;
     private String empIdentNum;
     private String planYearEnd;
     private String fiscalYearEnd;
@@ -17,12 +16,8 @@ public class PlanInfoDto {
     private String proTempPlan;
     private String productId;
     
-	public int getPlanId() {
-		return planId;
-	}
-	public void setPlanId(int planId) {
-		this.planId = planId;
-	}
+    private boolean isBulkUpdate;
+    
 	public String getEmpIdentNum() {
 		return empIdentNum;
 	}
@@ -89,6 +84,12 @@ public class PlanInfoDto {
 	public void setProductId(String productId) {
 		this.productId = productId;
 	}
-    
-    
+	public boolean isBulkUpdate() {
+		return isBulkUpdate;
+	}
+	public void setBulkUpdate(boolean isBulkUpdate) {
+		this.isBulkUpdate = isBulkUpdate;
+	}
+
+  
 }

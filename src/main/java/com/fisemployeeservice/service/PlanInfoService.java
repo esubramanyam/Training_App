@@ -1,7 +1,6 @@
 package com.fisemployeeservice.service;
 
 import com.fisemployeeservice.dto.PlanInfoDto;
-import com.fisemployeeservice.model.EmployeeModel;
 import com.fisemployeeservice.model.PlanInfoModel;
 
 import java.util.List;
@@ -22,4 +21,6 @@ public interface PlanInfoService {
 	
 	//Delete plan by id
 	boolean deletePlanById(int planId);
+
+	boolean addPlanInfoFromFile(PlanInfoModel entity);
 }
